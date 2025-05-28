@@ -44,15 +44,15 @@ export function Contact() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>alex.chen@example.com</span>
+                <span>brooksd079@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+254 (734)-481-905 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>San Francisco, CA</span>
+                <span>Nairobi, Kenya</span>
               </div>
             </div>
           </motion.div>
