@@ -40,7 +40,7 @@ export function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl sm:text-2xl text-muted-foreground font-light"
             >
-              Junior Cloud Engineer
+              Cloud Engineer
             </motion.p>
           </div>
 
