@@ -3,17 +3,19 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Donald Brooks - Junior Cloud Engineer",
+  title: "Donald Brooks - Cloud Engineer",
   description:
-    "Portfolio of Donald Brooks, a passionate junior cloud engineer specializing in AWS, DevOps, and modern web technologies.",
+    "Portfolio of Donald Brooks, a passionate cloud engineer specializing in AWS, DevOps, and modern web technologies.",
   keywords: ["cloud engineer", "AWS", "DevOps", "portfolio", "junior developer", "infrastructure"],
-  authors: [{ name: "Donald Brooks" }],
+  authors: [{ name: "Alex Chen" }],
   creator: "Donald Brooks",
   openGraph: {
     title: "Donald Brooks - Junior Cloud Engineer",
     description: "Portfolio showcasing cloud engineering projects and skills",
     type: "website",
+    url: "https://donaldbrooks.me",
   },
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -27,4 +29,3 @@ export default function RootLayout({
     </html>
   )
 }
-
