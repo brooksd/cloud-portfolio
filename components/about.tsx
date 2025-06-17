@@ -8,17 +8,17 @@ export function About() {
   const highlights = [
     {
       icon: GraduationCap,
-      title: "Bsc. Information Technology",
+      title: "Computer Science Graduate",
       description: "Recent graduate with focus on cloud computing and distributed systems",
     },
     {
       icon: Award,
-      title: "AWS Certified Solutions Architect - Associate",
-      description: "AWS Solutions Architect with hands-on experience in cloud services",
+      title: "AWS Certified",
+      description: "AWS Cloud Practitioner with hands-on experience in cloud services",
     },
     {
       icon: Code,
-      title: "Backend Developer",
+      title: "Full-Stack Developer",
       description: "Proficient in modern web technologies and cloud-native development",
     },
     {

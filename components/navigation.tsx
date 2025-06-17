@@ -27,13 +27,13 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md border-b" : "bg-transparent"
+        scrolled ? "bg-background/80 backdrop-blur-md border-b shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="font-mono font-medium text-lg">
-            brooks.dev
+            Brooks.me
           </Link>
 
           {/* Desktop Navigation */}

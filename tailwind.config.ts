@@ -103,6 +103,7 @@ const config: Config = {
           '"Courier New"',
           "monospace",
         ],
+        handwriting: ["Kalam", "Comic Sans MS", "cursive"],
       },
     },
   },

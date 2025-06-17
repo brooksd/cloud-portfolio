@@ -10,7 +10,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,11 +44,11 @@ export function Contact() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span>brooksd079@gmail.com</span>
+                <span>brooks@donaldbrooks.me</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <span>+254 (734)-481-905 </span>
+                <span>+254 (716) 630-090</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
