@@ -1,0 +1,36 @@
+name: Auto Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout latest code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+    - name: Deploy and Build on Droplet
+      env:
+        DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      run: |
+        ssh $DEPLOY_USER@$DEPLOY_HOST << EOF
+          set -e
+          cd $DEPLOY_PATH
+          git pull origin main
+          npm install
+          npm run build
+          pm2 restart all
+        EOF
