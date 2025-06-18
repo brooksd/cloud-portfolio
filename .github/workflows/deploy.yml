@@ -19,14 +19,6 @@ jobs:
         echo "${{ secrets.DEPLOY_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
-    
-    - name: Configure Safe Directory
-      run: |
-        if [ -z "$DEPLOY_PATH" ]; then
-          echo "DEPLOY_PATH is not set. Please set it before running this workflow."
-          exit 1
-        fi
-        git config --global --add safe.directory "$DEPLOY_PATH"
 
     - name: Deploy and Build on Droplet
       env:
@@ -34,11 +26,13 @@ jobs:
         DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
         DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
       run: |
+        echo "Connecting to $DEPLOY_USER@$DEPLOY_HOST"
         ssh $DEPLOY_USER@$DEPLOY_HOST << EOF
           set -e
+          echo "Deploying to path: $DEPLOY_PATH"
           cd $DEPLOY_PATH
           git pull origin main
           npm install
           npm run build
-          pm2 restart all
+          pm2 restart all || echo "PM2 not found or not running. Skipping restart."
         EOF
