@@ -54,8 +54,11 @@ jobs:
 
           echo "🚀 Restarting PM2 process..."
           if pm2 list | grep -q cloud-portfolio; then
+
+            echo "♻️ Reloading PM2 process..."
             pm2 reload cloud-portfolio --update-env || echo "PM2 not found or not running. Skipping restart."
           else
+            echo "🚀 Starting PM2 process for the first time..."
             pm2 start npm --name cloud-portfolio -- start
           fi
           pm2 save
