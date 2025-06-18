@@ -43,6 +43,15 @@ jobs:
           echo "🔨 Building the project..."
           npm run build
 
+          echo "🧹 Checking and killing any process using port 3000..."
+          PID=\$(sudo lsof -t -i :3000 || true)
+          if [ ! -z "\$PID" ]; then
+            echo "⚠️ Port 3000 is in use by PID \$PID. Killing..."
+            sudo kill -9 \$PID
+          else
+            echo "✅ Port 3000 is free"
+          fi
+
           echo "🚀 Restarting PM2 process..."
           pm2 restart cloud-portfolio || echo "PM2 not found or not running. Skipping restart."
 
