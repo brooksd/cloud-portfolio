@@ -31,6 +31,8 @@ jobs:
           set -e
           echo "Deploying to path: $DEPLOY_PATH"
           cd $DEPLOY_PATH
+          git reset --hard HEAD   
+          git clean -fd
           git pull origin main
           npm install
           npm run build
