@@ -20,8 +20,13 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519
         ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
     
-    - name: Mark Git directory as safe
-      run: git config --global --add safe.directory $DEPLOY_PATH
+    - name: Configure Safe Directory
+      run: |
+        if [ -z "$DEPLOY_PATH" ]; then
+          echo "DEPLOY_PATH is not set. Please set it before running this workflow."
+          exit 1
+        fi
+        git config --global --add safe.directory "$DEPLOY_PATH"
 
     - name: Deploy and Build on Droplet
       env:
