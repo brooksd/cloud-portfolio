@@ -33,8 +33,18 @@ jobs:
           cd $DEPLOY_PATH
           git reset --hard HEAD   
           git clean -fd
+
+          echo "🌀 Pulling latest changes..."
           git pull origin main
+
+          echo "📦 Installing dependencies..."
           npm install --force
+
+          echo "🔨 Building the project..."
           npm run build
-          pm2 restart all || echo "PM2 not found or not running. Skipping restart."
+
+          echo "🚀 Restarting PM2 process..."
+          pm2 restart cloud-portfolio || echo "PM2 not found or not running. Skipping restart."
+
+          echo "✅ Deployment completed successfully!"
         EOF
