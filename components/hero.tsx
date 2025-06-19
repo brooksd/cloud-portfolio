@@ -15,7 +15,7 @@ export function Hero() {
       {/* Main polaroid - positioned to complement the text layout */}
       <div className="absolute top-24 right-4 md:top-20 md:right-12 lg:top-16 lg:right-20 xl:right-32 hidden sm:block z-20">
         <PolaroidImage
-          src="/placeholder.svg?height=280&width=280"
+          src="/profile.jpg?height=280&width=280"
           alt="Donald Brooks working on cloud infrastructure"
           caption="Building scalable solutions"
           className="w-44 md:w-48 lg:w-52"
@@ -171,7 +171,7 @@ export function Hero() {
           className="sm:hidden mt-12 flex justify-center"
         >
           <PolaroidImage
-            src="/placeholder.svg?height=200&width=200"
+            src="/profile.jpg?height=200&width=200"
             alt="Donald Brooks - Cloud Engineer"
             caption="Ready to innovate!"
             className="w-40"
