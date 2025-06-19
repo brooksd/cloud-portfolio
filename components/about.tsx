@@ -40,7 +40,7 @@ export function About() {
         >
           <h2 className="text-3xl sm:text-4xl font-light mb-4">About Me</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            I'm a passionate junior cloud engineer who loves building scalable solutions and learning new technologies
+            I'm a passionate cloud engineer who loves building scalable solutions and learning new technologies
             every day.
           </p>
         </motion.div>
