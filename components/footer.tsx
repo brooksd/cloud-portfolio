@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
-            <p className="font-mono font-medium">brooks.dev</p>
+            <p className="font-mono font-medium">brooks.me</p>
             <p className="text-sm text-muted-foreground mt-1">Building the future, one cloud at a time.</p>
           </div>
 
