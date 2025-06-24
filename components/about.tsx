@@ -8,17 +8,17 @@ export function About() {
   const highlights = [
     {
       icon: GraduationCap,
-      title: "Computer Science Graduate",
+      title: "Information Technology Graduate",
       description: "Recent graduate with focus on cloud computing and distributed systems",
     },
     {
       icon: Award,
-      title: "AWS Certified",
-      description: "AWS Cloud Practitioner with hands-on experience in cloud services",
+      title: "AWS Certified Solutions Architect - Associate",
+      description: "AWS Certified Solutions Architect - Associate with hands-on experience in cloud services",
     },
     {
       icon: Code,
-      title: "Full-Stack Developer",
+      title: "Full-Stack Software Developer",
       description: "Proficient in modern web technologies and cloud-native development",
     },
     {
@@ -40,7 +40,7 @@ export function About() {
         >
           <h2 className="text-3xl sm:text-4xl font-light mb-4">About Me</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            I'm a passionate cloud engineer who loves building scalable solutions and learning new technologies
+            I'm a passionate Cloud/DevOps Engineer who loves building scalable solutions and learning new technologies
             every day.
           </p>
         </motion.div>
