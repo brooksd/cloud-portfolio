@@ -23,7 +23,7 @@ export function About() {
     },
     {
       icon: Cloud,
-      title: "DevOps Enthusiast",
+      title: "Cloud / DevOps Enthusiast",
       description: "Passionate about automation, CI/CD, and infrastructure as code",
     },
   ]
