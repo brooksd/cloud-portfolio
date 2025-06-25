@@ -7,19 +7,19 @@ export function Skills() {
   const skillCategories = [
     {
       title: "Cloud Platforms",
-      skills: ["AWS", "Azure", "Google Cloud", "DigitalOcean"],
+      skills: ["AWS", "Google Cloud", "DigitalOcean"],
     },
     {
       title: "Programming",
-      skills: ["Python", "JavaScript", "TypeScript", "Java", "Go"],
+      skills: ["Python", "JavaScript", "TypeScript"],
     },
     {
       title: "DevOps & Tools",
-      skills: ["Docker", "Kubernetes", "Terraform", "Jenkins", "Git"],
+      skills: ["Docker", "Terraform", "Git"],
     },
     {
       title: "Databases",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "DynamoDB"],
+      skills: ["SQL Lite", "Redis", "DynamoDB"],
     },
     {
       title: "Web Technologies",
