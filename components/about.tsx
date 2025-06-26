@@ -54,7 +54,7 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-muted-foreground leading-relaxed">
-              As a recent Computer Science graduate, I've discovered my passion for cloud computing and DevOps
+              As a Information Technology Student, I've discovered my passion for cloud computing and DevOps
               practices. I enjoy the challenge of designing efficient, scalable systems and the satisfaction of seeing
               them work seamlessly in production.
             </p>
